@@ -3,23 +3,24 @@
   margin: 0;
   box-sizing: border-box;
 }
-html{
+html {
   font-size: 62.5%;
-  font-family: 'Poppins', sans-serif;
+  font-family: "Poppins", sans-serif;
 }
 
-:root{
- --primary-color: #3F7863;
- --light-color: #8ee6c6c3;
- --secondary-color: #F5F5F5;
- --border-radius: 0.5rem;
+:root {
+  --primary-color: #3f7863;
+  --dark-primary-color: #082c1f;
+  --light-color: #8ee6c6c3;
+  --secondary-color: #f5f5f5;
+  --border-radius: 0.5rem;
 }
-body{
+body {
   background-color: #f5f5f5;
 }
 
 /* Navigation Start */
-nav{
+nav {
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -27,7 +28,7 @@ nav{
   box-shadow: 0 0.1rem 1rem var(--primary-color);
 }
 
-.logo{
+.logo {
   display: flex;
   align-items: end;
   font-size: 2.5rem;
@@ -36,37 +37,109 @@ nav{
   color: var(--primary-color);
 }
 
-
 .nav-links ul {
   display: inline-flex;
-  align-items: center;  
+  align-items: center;
   list-style: none;
   gap: 2rem;
 }
 
-ul li a{
+ul li a {
   text-decoration: none;
   font-size: 1.6rem;
   padding: 0.5rem 1rem;
-  color: var(--primary-color);  
+  color: var(--primary-color);
   font-weight: 500;
 }
 
+/* Hero section */
+header {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  justify-content: space-evenly;
+  padding: 5rem 10rem;
+  gap: 5rem;
+}
+.hero-left {
+  padding: 5rem 0;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+.icon svg {
+  font-size: 2rem;
+  padding: 2rem;
+  border-radius: 50%;
+  background-color: var(--primary-color);
+}
+.hero-text h1 {
+  font-size: 4rem;
+  color: var(--primary-color);
+}
+.hero-text p {
+  font-size: 1.6rem;
+  color: var(--primary-color);
+  line-height: 2.5rem;
+}
+.cta-con {
+  display: flex;
+  gap: 2rem;
+}
+.hero-right {
+  position: relative;
+  background-image: url("https://images.immediate.co.uk/production/volatile/sites/30/2024/12/Sticky-carrot-and-date-cake-with-tahini-maple-icing-29d491d.jpg?quality=90&resize=768,574");
+  background-size: cover;
+  background-position: center;
+  border-radius: 3rem;
+  height: 50rem;
+} 
+.floating-cake {
+  padding: 4rem;
+  border-radius: 50%;
+  background-color: rgba(255, 166, 0, 0.216);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  
+}
+.top-right{
+  top: -5rem;
+  right: -5rem;
+}
+.bottom-left{
+  bottom: -5rem;
+  left: -5rem;
+}
 
 
+/* Reuable class style */
 .btn {
   padding: 0.6rem 1.2rem;
   background: none;
-  border:  1px solid var(--primary-color);
+  border: 1px solid var(--primary-color);
   color: var(--primary-color);
   border-radius: var(--border-radius);
   text-decoration: none;
   font-weight: 500;
-  transition: all 0.3s ease-in;
+  transition: all 0.3s ease;
 }
 
-.btn:hover {
+.btn-primary {
   background-color: var(--primary-color);
   color: var(--secondary-color);
-  transition: all 0.3s ease;
+}
+
+.btn-secondary {
+  background-color: var(--secondary-color);
+  color: var(--primary-color);
+}
+
+.btn-primary:hover {
+  background-color: var(--dark-primary-color);
+  color: var(--secondary-color);
+}
+.btn-secondary:hover {
+  background-color: var(--primary-color);
+  color: var(--secondary-color);
 }
